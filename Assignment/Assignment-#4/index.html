@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crossword Puzzle </title>
+    <script src="crossword.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initializeScreen()">
+    <h1 style="border-style:solid; border-width:3px; border-color:black; padding: 10px; text-align: center; background-color:#B6B6B4; color:white">Let's play a game and have fun!</h1>
+    <br>
+    <h5 style="position: relative; left: 100px">Note: If the box's color turns pink after clicking "check", then you are right!</h5>
+    <div id="firstbox">
+    <table id="puzzle"></table>
+    </div>
+    <div id="secondbox">
+        <table>
+            <tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
+            <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
+            <td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
+            <td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
+        </table>
+    </div>
+    <table id=hintsTable>
+        <tr>
+            <td><strong>Across:</strong></td></td><td><strong>Down:</strong></td>
+        </tr>
+        <tr>
+            <td>1. The basic unit of currency in Canada is the Canadian ______.</td><td>2. The capital of Canada is ______.</td>
+        </tr>
+        <tr>
+            <td>3. The Eskimos of Canada are now called the ______.</td><td>4. Canada has ______ provinces and three territories.</td>
+        </tr>
+        <tr>
+            <td>6. ______ has the largest population out of all the Canadian provinces.</td><td>5. ______ is the capital of Ontario, and also the largestr city in the country.</td>
+        </tr>
+        <tr>
+            <td>8. The prime ______ is the head of Canadian government.</td><td>7. The monarch of Canada is also the ______ monarch.</td>
+         </tr>
+        <tr>
+            <td>10. Canada borders three oceans-the Atlantic Ocean, the Pacific Ocean, and the ______ ocean.</td><td>8. Canada's national symbols are the beaver and the ______ leaf.</td>
+        </tr>
+        <tr>
+            <td>11. The southern border of Ontario touches the five great ______.</td><td>9. Most French Canadians live in the province of ______.</td>
+        </tr>
+        <tr>
+            <td>12. The colors on the Canadian flag are rea and ______. </td>
+        </tr>
+    </table> 
+</body>
+</html>

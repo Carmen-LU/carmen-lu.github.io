@@ -1,0 +1,57 @@
+<style>
+
+#cross{
+	text-align: center;
+	widows: 30px;
+	height:30px;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: 1px solid white;
+}
+#buttons{
+	width: 60%;
+	float: right;
+}
+tr{
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+}
+td{
+	height: 30px;
+	width: 30px;
+}
+#firstbox{
+	position: relative;
+	left: 100px
+}
+#secondbox{
+	position: relative;
+	left: 100px
+}
+.butt{
+	height: 50px;
+	width: 115px;
+}
+#puzzle{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+.inputBox{
+	width: 25px;
+	height: 25px;
+	border: 1px solid black;
+	text-align: center;
+}
+#hintsTable{
+	width: 520px; 
+	position: relative;
+	float: right;
+    top: -480px;
+    right: 100px;
+}
+</style>
