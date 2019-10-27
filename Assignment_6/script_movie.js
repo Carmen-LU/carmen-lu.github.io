@@ -3,7 +3,7 @@ $(document).ready(function(){
     $("button#get_data").click(function(){
         var items = [];
         var i = 0;
-        var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/%E7%94%B5%E5%BD%B1?api_key=keyVgAVOiOdcDu9Eh";
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/Movie?api_key=keyVgAVOiOdcDu9Eh";
         var dataSet = [];
         $.getJSON(airtable_read_endpoint, function(result){
             $.each(result.records, function(key,value){
