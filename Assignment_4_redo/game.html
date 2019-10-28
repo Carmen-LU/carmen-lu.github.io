@@ -2,23 +2,25 @@
 <html>
 <head>
     <title>Number Guessing Game</title>
+    <meta charset="utf-8">
     <script src="game.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </head>
 
 <body>
+    <center>
     <div class="container">
-            <button type="button" class="btn btn-secondary">Secondary</button>
     <h3 style="border-style:solid; border-width:3px; border-color:black; padding: 10px; text-align: center; background-color:#B6B6B4; color:white">I've had a number in my head. Would you like to guess what it is? It's between 1 to 100.</h3>
-    <input type="button" value="Play Now" onclick="showGame()"/> 
-    <input type="button" value="No Thanks"/>
+    <button type="button" class="btn btn-info" onclick="showGame();">Play now!</button>
+    <button type="button" class="btn btn-info">No, thanks.</button>
+    <br><br>
     <div id="guessDiv" style="display: none">
     <input type="text" id="guessNum">
-    <input type="button" value="Guess Number" onclick="guessNum()"/>
+    <button type="button" class="btn btn-info" onclick="guessNum();">Guess</button>
+    </div>   
     </div>
-    </div>
+    </center>
 </body>
 </html>
