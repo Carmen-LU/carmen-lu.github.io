@@ -1,106 +1,172 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Love Movies</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
-  <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
-  <style type="text/css">
-    #map {
-      height: 100%;
-    }
-  </style>
-</head>
+    
+    <head>
+        <title>Love Movies</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+        <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+        <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+        <style type="text/css">
+            #map {
+              height: 100%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="cover">
+            <div class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><span>Love Movies</span></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#movies">Movies</a>
+                            </li>
+                            <li>
+                                <a href="#details">Details</a>
+                            </li>
+                            <li>
+                                <a href="#cinemas">HK Cinema</a>
+                            </li>
+                            <li>
+                                <a href="#map">Cinema Map</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-image"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Heading</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici eli.</p>
+                        <br>
+                        <br>
+                        <a class="btn btn-lg btn-default">Click me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <section id="movies">
+                <div class="row">
+                    <h1>Airtable Embedded Gallery View</h1>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrF4hkZ2mSDC049J?backgroundColor=orange&amp;viewControls=on"
+                    frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                </div>
+            </section>
+            <section id="details">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h1>Airtable GetJSON</h1>
+                        <div class="well">
+                            <h5 id="demo">You can get additional information here. Please click "Show GetJSON Table".</h5>
+                        </div>
+                        <button type="button" class="btn btn-info" id="get_data">Show GetJSON Table</button>
+                        <br>
+                        <br>
+                        <div class="table-responsive">
+                            <table id="table1" width="100%" class="table table-bordered"></table>
+                        </div>
+                        <!-- table responsive -->
+                        <button type="button" class="btn btn-warning" id="get_data2">Show Total</button>
+                        <br>
+                        <div class="table-responsive">
+                            <table id="table2" width="100%" class="table table-bordered"></table>
+                        </div>
+                        <!-- table responsive -->
+                        <div id="chart"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="cinemas">
+                <div class="row">
+                    <h1>Airtable Embedded Gallery View</h1>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrBWf19hsXghga04?backgroundColor=orange&amp;viewControls=on"
+                    frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                </div>
+            </section>
+            <div class="container">
+                <h1>HK Cinema Map</h1>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <button type="button" class="btn btn-warning" id="roll_up" onclick="show_districts();">Show Districts</button>
+                        <br>
+                        <div id="map" style="width: 600px; height: 400px"></div>
+                    </div>
+                    <!-- column -->
+                </div>
+                <!-- row -->
+            </div>
+        </div>
+        <!-- container -->
+        <div class="footer">
+            <p>Copyright@Carmen LU</p>
+        </div>
+        <script>
+            var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
+            
+                var map = L.map('map')
+                      .addLayer(mapboxTiles)
+                      .setView([22.287111, 114.191667], 13);
+            
+            
+                var items = [];
+                var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/Broadway_location?api_key=keyVgAVOiOdcDu9Eh";
+            
+                var data = [];
+                $.getJSON(airtable_read_endpoint, function(result) {
+                       $.each(result.records, function(key,value) {
+                           items = {};
+                               items["name"] = value.fields.Name;
+                               items["url"] = value.fields.url;
+                               items["image_url"] = value.fields.img_url;
+                               items["latitud"] = value.fields.Lat;
+                               items["longitud"] = value.fields.Lng;
+                               data.push(items);
+                               console.log(items);
+                        }); // end .each
+                }); // end getJSON
+        </script>
+        <script>
+            function show_districts(){
+            
+                  for (var i in data) {
+                      var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+                      L.marker( latlng )
+                          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+                          .addTo(map);
+                  }
+            
+                }
+        </script>
+        <script src="script.js"></script>
+    </body>
 
-<body>
-  <nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-        <li class="active"><a href="getjson_movie.html">GetJSON_movie</a></li>
-        <li><a href="getjson_cinema.html">GetJSON_cinema</a></li></ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="row">
-        <h1>Airtable Embedded Gallery View</h1>
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrF4hkZ2mSDC049J?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-        <h1>Airtable GetJSON</h1>
-          <div class="well"><h5 id="demo">You can get additional information here. Please click "Show GetJSON Table".</div>
-          <button type="button" class="btn btn-info" id='get_data'>Show GetJSON Table</button><br><br>
-          <div class="table-responsive">
-            <table id="table1" width="100%" class="table table-bordered"></table>
-          </div><!-- table responsive -->
-          <button type="button" class="btn btn-warning" id='get_data2'>Show Total</button><br>
-          <div class="table-responsive">
-                <table id="table2" width="100%" class="table table-bordered"></table>
-          </div><!-- table responsive -->
-          <div id="chart"></div>
-          <h1>Leaflet Example</h1>
-          <div class="row">
-             <div class="col-xs-12 col-sm-12 col-md-12">
-               <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
-              <div id="map" style="width: 600px; height: 400px"></div>
-             </div><!-- column -->
-          </div><!-- row -->
-        </div><!-- end col -->
-    </div><!-- end row -->
-  </div><!-- container -->
-
-  <script>
-    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
-
-    var map = L.map('map')
-          .addLayer(mapboxTiles)
-          .setView([22.287111, 114.191667], 13);
-
-
-    var items = [];
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/Broadway_location?api_key=keyVgAVOiOdcDu9Eh";
-
-    var data = [];
-    $.getJSON(airtable_read_endpoint, function(result) {
-           $.each(result.records, function(key,value) {
-               items = {};
-                   items["name"] = value.fields.Name;
-                   items["url"] = value.fields.url;
-                   items["image_url"] = value.fields.img_url;
-                   items["latitud"] = value.fields.Lat;
-                   items["longitud"] = value.fields.Lng;
-                   data.push(items);
-                   console.log(items);
-            }); // end .each
-    }); // end getJSON
-  </script>
-
-  <script>
-    function show_districts(){
-
-      for (var i in data) {
-          var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
-          L.marker( latlng )
-              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
-              .addTo(map);
-      }
-
-    }
-
-  </script>
-  
-  <script src='script.js'></script>
-</body>
 </html>
