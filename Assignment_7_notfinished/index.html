@@ -5,20 +5,17 @@
         <title>Love Movies</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
-        <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
         <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+        <link rel="stylesheet" href="style.css">
         <style type="text/css">
             #map {
               height: 100%;
@@ -41,9 +38,6 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active">
-                                <a href="#">Home</a>
-                            </li>
                             <li>
                                 <a href="#movies">Movies</a>
                             </li>
@@ -63,16 +57,24 @@
             <div class="cover-image"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1>Heading</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisici eli.</p>
-                        <br>
-                        <br>
-                        <a class="btn btn-lg btn-default">Click me</a>
+                    <div class="col-md-12">
+                        <div id="fullcarousel-example" data-interval="false" class="carousel slide"
+                        data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="Titanic.jpg">
+                                    <div class="carousel-caption">
+                                        <h2>Titanic</h2>
+                                        <p>“You jump, I jump”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="container">
             <section id="movies">
                 <div class="row">
