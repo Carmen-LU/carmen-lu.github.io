@@ -9,10 +9,6 @@ $(document).ready(function(){
           $.each(result.records, function(key,value){
               items = [];
                   items.push(value.fields.电影);
-                  items.push(value.fields.豆瓣评分);
-                  items.push(value.fields.导演);
-                  items.push(value.fields.编剧);
-                  items.push(value.fields.主演);
                   items.push(value.fields.上映日期);
                   items.push(value.fields.上映地点);
                   items.push(value.fields.时长);
@@ -27,14 +23,6 @@ $(document).ready(function(){
               retrieve: true,
               columns:[
                   { title: "电影",
-                    defaultContent:""},
-                  { title: "豆瓣评分",
-                    defaultContent:"" },
-                  { title: "导演",
-                    defaultContent:""},
-                  { title: "编剧",
-                    defaultContent:""},
-                  { title: "主演",
                     defaultContent:""},
                   { title: "上映日期",
                     defaultContent:""},
@@ -92,3 +80,38 @@ $(document).ready(function(){
   }); // end button
 
 }); // document ready
+
+var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
+            
+                var map = L.map('map')
+                      .addLayer(mapboxTiles)
+                      .setView([22.287111, 114.191667], 13);
+            
+            
+                var items = [];
+                var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/Broadway_location?api_key=keyVgAVOiOdcDu9Eh";
+            
+                var data = [];
+                $.getJSON(airtable_read_endpoint, function(result) {
+                       $.each(result.records, function(key,value) {
+                           items = {};
+                               items["name"] = value.fields.Name;
+                               items["url"] = value.fields.url;
+                               items["image_url"] = value.fields.img_url;
+                               items["latitud"] = value.fields.Lat;
+                               items["longitud"] = value.fields.Lng;
+                               data.push(items);
+                               console.log(items);
+                        }); // end .each
+                }); // end getJSON
+
+function show_districts(){
+            
+                  for (var i in data) {
+                      var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+                      L.marker( latlng )
+                          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+                          .addTo(map);
+                  }
+            
+                }
