@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>張敬軒的個人網站-主頁</title>
+  <!--copied-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+  <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+  <style type="text/css">
+    #map {
+      height: 100%;
+    }
+  </style>
+  <!--Pingendo-->
+  <!--<link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template -->
+  <link href="css/agency.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Hins Cheung</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html">主頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="music.html">專輯&amp;單曲</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="concert.html">演唱會</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="development.html">跨界發展</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="socialmedia.html">媒體帳號</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="contact.html">聯繫我們</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Be loved</div>
+        <div class="intro-heading text-uppercase">張敬軒</div>
+        <a class="btn btn-primary btn-l text-uppercase js-scroll-trigger" href="#introduction">了解更多</a>
+      </div>
+    </div>
+  </header>
+  <!-- Introduction -->
+  <section id="introduction" class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">個人簡介</h2>
+          <h3 class="section-subheading text-muted">Personal Introduction</h3>
+        </div>
+      </div>
+      <div class="row my-4 d-flex justify-content-center">
+        <div class="p-0 order-2 order-lg-1 col-lg-3">
+          <img class="img-fluid d-block" src="img/index/introduction.jpg">
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3 col-lg-7 order-1 order-lg-2">
+          <p class="text-justify">張敬軒（Hins Cheung），幼名張寧，1981年2月1日出生於廣東省廣州市，祖籍北京。他主要在香港發展，是香港著名實力派男歌手、詞曲作家及唱片監製，現任香港演藝人協會副會長。<br><br>2002年10月，張敬軒簽約環球唱片，同年發行的歌曲《斷點》獲得大眾關注，歌曲成為其演藝生涯的代表作品。2006年4月，他的作品《My Way》被推薦入選中國內地中小學音樂教材。2007年，憑藉《酷愛》一曲在各大樂壇頒獎典禮上橫掃多個歌曲獎，奠定樂壇地位。2008年，於香港紅磡體育館舉行首個個人演唱會。2013年7月，與英皇娛樂簽約。<br><br>他已獲得香港流行音樂業內多個認受性最高的獎項殊榮，包括2014年度《叱咤樂壇流行榜頒獎典禮》的「我最喜愛的男歌手」；2015－2016、2018年度《叱咤樂壇流行榜頒獎典禮》的「叱咤樂壇男歌手金獎」；2014－2016、2018年度TVB《勁歌金曲頒獎典禮》「最受歡迎男歌星」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Video -->
+  <section id="video" class="bg-light page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">視頻介紹</h2>
+          <h3 class="section-subheading text-muted">Video Introduction</h3>
+        </div>
+      </div>
+      <div class="embed-responsive embed-responsive-16by9 col-lg-12 text-center">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kXyT0EaWg9Q" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="copyright">Copyright © Your Website 2019</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
