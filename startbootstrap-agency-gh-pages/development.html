@@ -22,7 +22,9 @@
   <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
   <style type="text/css">
-    #map {height: 100%;}
+    #map {
+      height: 100%;
+    }
   </style>
 </head>
 
@@ -58,12 +60,12 @@
     </div>
   </nav>
   <!-- Header -->
-  <header class="masthead">
+  <header class="masthead" style="background-image: url(img/development/background.jpg)">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
-        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        <div class="intro-heading text-uppercase">
+          <h4>搖身一變張老闆</h4>
+        </div>
       </div>
     </div>
   </header>
@@ -77,20 +79,21 @@
         </div>
       </div>
       <div class="row">
-        <div class="p-0 col-lg-5 order-2 order-lg-1"> <img class="img-fluid d-block" src="https://static.pingendo.com/cover-bubble-light.svg"> </div>
+        <div class="p-0 col-lg-5 order-2 order-lg-1"> <img class="img-fluid d-block" src="img/development/junon.jpg"></div>
         <div class="d-flex flex-column justify-content-center p-3 col-lg-7 order-1 order-lg-2">
-          <p class="lead mb-0">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary.</p>
+          <h4>Junon仙后餐廳</h4>
+          <p class="text-justify">張敬軒親自籌備一年，將音樂與餐飲結合的「Junon仙后餐廳」於2017年1月17日開業。該餐廳裝修風格仿照香港60年代盛極一時的首間旋轉餐廳「仙后旋轉餐廳」，佔地近一萬呎。餐廳分兩部份：Bistro Junon似巴黎小餐館，氛圍較輕鬆，價格也較便宜；而La Scene de Junon則是設有表演舞台的fine dining area，食客在此可以一邊聽歌看表演，一邊享受美食。餐廳日常設有各種音樂及戲劇演出，主打經典音樂，也有香港的地水南音及懷舊電影歌曲等。該餐廳重金聘請巴黎總廚坐鎮，炮製傳統法國餐。張敬軒也把他私人珍藏的古董用於餐廳的擺設，使其展現出濃厚的歐式風情。<br>電話：2808 0882&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 營業時間：12pm - 12am<br>訂座網址：www.junon.com.hk<br></p>
         </div>
       </div>
       <div class="row">
         <div class="d-flex flex-column justify-content-center p-3 col-lg-7">
-          <p class="lead mb-0">I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love.</p>
+          <h4>The Crown空中酒廊</h4>
+          <p>I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love.</p>
         </div>
-        <div class="p-0 col-lg-5"> <img class="img-fluid d-block" src="https://static.pingendo.com/cover-bubble-dark.svg"> </div>
+        <div class="p-0 col-lg-5"> <img class="img-fluid d-block" src="img/development/thecrown.jpg"> </div>
       </div>
     </div>
   </section>
-  
   <!-- Map -->
   <section id="canteen" class="page-section">
     <div class="container">
@@ -107,18 +110,15 @@
           <div id="map" style="width: 600px; height: 400px"></div>
         </div>
       </div>
-
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12"><iframe width="100%" height="400" src="https://maps.google.com/maps?q=New%20York&amp;z=14&amp;output=embed" scrolling="no" frameborder="0"></iframe></div>
+      <div class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12"><iframe width="100%" height="400" src="https://maps.google.com/maps?q=New%20York&amp;z=14&amp;output=embed" scrolling="no" frameborder="0"></iframe></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  
-    </div>
   </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -170,6 +170,7 @@
   <script src="js/agency.min.js"></script>
   <!-- JavaScript for map -->
   <script src="js/script.js"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
