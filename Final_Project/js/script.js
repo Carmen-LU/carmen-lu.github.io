@@ -4,7 +4,7 @@ var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.pn
         .addLayer(mapboxTiles)
         .setView([22.287111, 114.191667], 13);
             var items = [];
-            var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/Broadway_location?api_key=keyVgAVOiOdcDu9Eh";
+            var airtable_read_endpoint = "https://api.airtable.com/v0/appIRhjgYeH6hJJUT/canteen?api_key=keyVgAVOiOdcDu9Eh"
             var data = [];
                 $.getJSON(airtable_read_endpoint, function(result) {
                     $.each(result.records, function(key,value) {
@@ -12,8 +12,8 @@ var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.pn
                         items["name"] = value.fields.Name;
                         items["url"] = value.fields.url;
                         items["image_url"] = value.fields.img_url;
-                        items["latitud"] = value.fields.Lat;
-                        items["longitud"] = value.fields.Lng;
+                        items["latitud"] = value.fields.Latitude;
+                        items["longitud"] = value.fields.Longitude;
                         data.push(items);
                         console.log(items);
                     }); // end .each
