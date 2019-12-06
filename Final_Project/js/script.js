@@ -1,3 +1,42 @@
+$(document).ready(function(){
+
+    $("#get_data").ready(function(){
+        var items = [];
+        var i = 0;
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appIRhjgYeH6hJJUT/Song?api_key=keyVgAVOiOdcDu9Eh"
+        var dataSet = [];
+        $.getJSON(airtable_read_endpoint, function(result){
+            $.each(result.records, function(key,value){
+                items = [];
+                    items.push(value.fields.單曲);
+                    items.push(value.fields.發行時間);
+                    items.push(value.fields.發行公司);
+                    items.push(value.fields.MV觀看地址);
+                    items.push(value.fields.備註);
+                    dataSet.push(items);
+                    console.log(items);
+            }); // end .each
+            console.log(dataSet);
+  
+            $('#table').DataTable({
+                data: dataSet,
+                retrieve: true,
+                columns:[
+                    { title: "單曲",
+                      defaultContent:""},
+                    { title: "發行時間",
+                      defaultContent:""},
+                    { title: "發行公司",
+                      defaultContent:""},
+                    { title: "MV觀看地址",
+                      defaultContent:""},
+                    { title: "備註",
+                      defaultContent:""},]
+            });
+        });
+    });
+})
+
 var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
             
     var map = L.map('map')
@@ -27,39 +66,3 @@ function show_districts(){
             .addTo(map);
     }
 }
-
-$("button#get_data1").click(function(){
-    var items = [];
-    var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appOkCJ9DXJ5WgGVW/Movie?api_key=keyVgAVOiOdcDu9Eh";
-    var dataSet = [];
-    $.getJSON(airtable_read_endpoint, function(result){
-        $.each(result.records, function(key,value){
-            items = [];
-                items.push(value.fields.电影);
-                items.push(value.fields.上映日期);
-                items.push(value.fields.上映地点);
-                items.push(value.fields.时长);
-                items.push(value.fields.剧情简介);
-                dataSet.push(items);
-                console.log(items);
-        }); // end .each
-        console.log(dataSet);
-
-        $('#table1').DataTable({
-            data: dataSet,
-            retrieve: true,
-            columns:[
-                { title: "电影",
-                  defaultContent:""},
-                { title: "上映日期",
-                  defaultContent:""},
-                { title: "上映地点",
-                  defaultContent:""},
-                { title: "时长",
-                  defaultContent:""},
-                { title: "剧情简介",
-                  defaultContent:""},]
-        });
-    });
-}); 
