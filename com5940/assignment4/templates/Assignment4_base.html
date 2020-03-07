@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>歡迎來到我的頁面</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <!--link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json"-->
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <!--link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico"-->
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .card {
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+            box-shadow: 0 .4rem .4rem rgba(0, 0, 0, .2);
+        }
+        
+        .card-text p {
+            padding: 10px;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+</head>
+
+<body>
+    <div class="navbar navbar-dark bg-info shadow-sm">
+        <div class="container d-flex align-items-center">
+            <div class="p-2 bd-highlight">
+                <a class="navbar-brand" href="/">張敬軒的音樂世界</a>
+            </div>
+            <div class="p-2 bd-highlight">
+                <a class="btn btn-light" href="/" role="button">主頁</a>
+                <a class="btn btn-light" href="/album" role="button">專輯</a>
+            </div>
+            <div class="ml-auto p-2 bd-highlight">
+                <a class="btn btn-light" href="/logout" role="button"><span class="glyphicon glyphicon-log-out"></span>登出</a>
+                <a class="btn btn-light" href="/login" role="button"><span class="glyphicon glyphicon-log-in"></span>登入</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
+
+</html>

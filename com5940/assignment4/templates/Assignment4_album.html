@@ -1,0 +1,31 @@
+{% extends "Assignment4_base.html" %} {% block content %}
+
+
+<div class="container">
+    <h2 style="color:black; font-weight:bold;">張敬軒的音樂世界</h2>
+    <p class="lead text-muted">在這裡，您可以查看張敬軒出道以來所出的音樂專輯，及其相關信息。</p>
+    <hr>
+</div>
+
+<div class="album">
+    <div class="container">
+
+        {% for item in dataset %} {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %} {% if counter == 1 %}
+        <div class="row">{% endif %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <title>Placeholder</title><img height="225" width="auto" src="{{ item['圖片連結'] }}" />
+                    <div class="card-body" style="padding:1.25rem">
+                        <p class="card-text">專輯名稱: {{ item['名稱'] }}<br>發行時間: {{ item['發行時間'] }}<br>發行公司: {{ item['發行公司'] }}<br>曲目: {{ item['曲目'] }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if counter == 3 %}</div>
+        <!--end row-->{% set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %} {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
