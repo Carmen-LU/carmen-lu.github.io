@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+  {% for album in album.items %}
+       {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %}
+        {% if counter == 1 %}<div class="row">{% endif %}
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <p>Col#:{{ loop.index }}<br>Album ID:{{ album.albumID }}<br>專輯名稱:{{album.name}}<br>發行時間:{{album.time}}<br>發行公司:{{album.company}}<br>曲目:{{album.songs}}</p>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">查看</button>
+                </div>
+           </div>
+        </div> 
+       {% if counter == 3 %}</div><!--end row-->{%  set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %}
+  {% endfor %}
+  <div class="container" style="float: left;">
+  {% for page in album.iter_pages() %}  
+    {% if page %}
+        <a href="{{url_for('album')}}/{{ page }}">{{ page }}</a>
+    {% else %}
+        ...
+    {% endif %}
+  {% endfor %}  
+  </div>
+{% endblock %}
